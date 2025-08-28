@@ -10,6 +10,10 @@
   "keywords": ["portfolio", "node", "express", "javascript"],
   "author": "Ivo José Caregnato Junior",
   "license": "MIT",
+  "engines": {
+    "node": "22.x",
+    "npm": "10.x"
+  },
   "dependencies": {
     "compression": "^1.8.1",
     "cors": "^2.8.5",
