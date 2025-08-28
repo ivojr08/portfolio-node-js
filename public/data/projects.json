@@ -1,0 +1,81 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Churn Prediction for Cooperative Members",
+      "summary": "AI project to predict member churn using Python pipelines, SQL data, and SHAP explanations.",
+      "description": "Built a full machine learning pipeline to predict cooperative member churn. Includes ETL in Python/SQL, feature engineering (transactions, balances, product usage), model training, and explainability with SHAP. Integrated into Power BI dashboards for decision-making.",
+      "tech": ["Python", "Scikit-learn", "SHAP", "SQL Server", "Power BI"],
+      "tags": ["AI", "Data", "Predictive"],
+      "image": "/assets/projetos/exemplo1.png",
+      "repo": "",
+      "demo": ""
+    },
+    {
+      "id": 2,
+      "title": "PIPE – Commercial Management App",
+      "summary": "Power Apps + SQL Server app for managing cooperatives, production, and commercial targets.",
+      "description": "Developed a custom application in Power Apps integrated with SQL Server. Includes manager login, cooperative member registration, product tracking, and automated stored procedures for KPIs. Used for monitoring regional commercial performance.",
+      "tech": ["Power Apps", "SQL Server", "Power Automate"],
+      "tags": ["Low-code", "Commercial"],
+      "image": "/assets/projetos/exemplo1.png",
+      "repo": "",
+      "demo": ""
+    },
+    {
+      "id": 3,
+      "title": "Banco da Mulher – Credit Program",
+      "summary": "App and automations to manage female entrepreneurship credit program.",
+      "description": "Designed an application to manage registration, editing, and exclusion of participants in a women-focused credit program. Integrated with SharePoint and SQL Server. Added automated PDF generation, sequentials, and Power Automate flows.",
+      "tech": ["Power Apps", "SharePoint", "Power Automate", "SQL Server"],
+      "tags": ["Automation", "Low-code"],
+      "image": "/assets/projetos/exemplo1.png",
+      "repo": "",
+      "demo": ""
+    },
+    {
+      "id": 4,
+      "title": "E-Carta – Automated Notifications",
+      "summary": "Automation of extrajudicial notification process with PDFs and remittance files.",
+      "description": "Built an application to automate the sending of extrajudicial notifications. Generates PDFs and remittance files automatically via Power Automate Desktop and SQL Server. Reduced manual work significantly.",
+      "tech": ["Power Apps", "Power Automate Desktop", "SQL Server", "SharePoint"],
+      "tags": ["Automation", "RPA"],
+      "image": "/assets/projetos/exemplo1.png",
+      "repo": "",
+      "demo": ""
+    },
+    {
+      "id": 5,
+      "title": "Card & POS Device Inventory Management",
+      "summary": "Power Apps + BI solution for tracking stock of plastic cards and Sipag POS devices.",
+      "description": "Created a solution for inventory control of cards and POS devices across agencies. Includes Power BI reports, SharePoint lists, and Power Apps for operational management. Improved transparency and reduced stock issues.",
+      "tech": ["Power Apps", "Power BI", "SharePoint"],
+      "tags": ["BI", "Operations"],
+      "image": "/assets/projetos/exemplo1.png",
+      "repo": "",
+      "demo": ""
+    },
+    {
+      "id": 6,
+      "title": "RPA Automations – Back-office Processes",
+      "summary": "Developed several RPA flows using Power Automate Desktop and Python scripting.",
+      "description": "Automated repetitive manual tasks across different areas. Includes flows for generating remittance files, zipping and uploading reports, interacting with Sisbr systems via RPA, and integrating with SQL/SharePoint. These automations reduced execution time from hours to minutes.",
+      "tech": ["Power Automate Desktop", "Python", "SQL Server", "SharePoint"],
+      "tags": ["RPA", "Automation"],
+      "image": "/assets/projetos/exemplo1.png",
+      "repo": "",
+      "demo": ""
+    },
+    {
+      "id": 7,
+      "title": "Debt Renegotiation Workbook (VBA)",
+      "summary": "Excel + VBA tool for managing credit renegotiation processes.",
+      "description": "Created a robust VBA workbook that automates data filtering, contract validation, guarantee checks, and PDF generation for renegotiation terms. Integrated with multiple Excel bases (credit portfolio, guarantees, recovery actions). Significantly improved performance and user experience compared to manual operations.",
+      "tech": ["Excel VBA", "Macros", "ETL"],
+      "tags": ["Excel", "VBA", "Automation"],
+      "image": "/assets/projetos/exemplo1.png",
+      "repo": "",
+      "demo": ""
+    }
+  ]
+}

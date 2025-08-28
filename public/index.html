@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ivo José Caregnato Junior — Portfólio</title>
+  <meta name="description" content="Portfólio de Ivo Junior: projetos, experiência e contato." />
+  <meta property="og:title" content="Ivo Junior — Portfólio" />
+  <meta property="og:description" content="Projetos, experiência e contato." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/avatar.jpg" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="/styles.css" as="style" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="logo" href="#">&lt;Ivo.Dev /&gt;</a>
+      <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+      <ul class="menu">
+        <li><a href="#inicio">Home</a></li>
+        <li><a href="#sobre">About</a></li>
+        <li><a href="#projetos">Projects</a></li>
+        <li><a href="#experiencia">Experience</a></li>
+        <li><a href="#habilidades">Skills</a></li>
+        <li><a href="#contato">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero container">
+      <img class="avatar" src="/assets/avatar.jpg" alt="Profile photo" />
+      
+      <div class="intro">
+        <h1>Hi, I’m <span class="hl">Ivo José Caregnato Junior</span>.</h1>
+        <p class="tagline">JavaScript/Node.js Developer & Data Specialist</p>
+        
+        <p class="skills-line">
+          Skilled in <strong>Python</strong>, <strong>JavaScript</strong>, <strong>SQL Server</strong>, 
+          <strong>Power BI</strong>, <strong>Power Apps</strong>, 
+          <strong>Power Automate</strong>, <strong>Docker</strong>, and <strong>Git</strong>.
+        </p>
+        
+        <div class="cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn ghost" href="/assets/cv.pdf" target="_blank">Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container section">
+      <h2>About Me</h2>
+      <p>
+        I’m Ivo José Caregnato Junior, a 32-year-old Computer Scientist from Brazil, currently working at <strong>Sicoob Credicapital</strong> as a Senior Business Intelligence Analyst.
+      </p>
+      <p>
+        Over the past years, I’ve been building solutions that combine <strong>data engineering, machine learning, automation, and low-code platforms</strong> to create real business impact. My experience spans across the Microsoft Power Platform (Power BI, Power Apps, Power Automate), SQL Server, and Python, where I’ve developed ETL pipelines, predictive models, and interactive dashboards to support data-driven decision making.
+      </p>
+      <p>
+        I’m particularly passionate about <strong>AI and predictive modeling</strong>, and I’ve recently led projects focused on churn prediction, credit risk, and automation of complex business workflows. In addition, I design and maintain applications that integrate multiple systems (SQL Server, SharePoint, APIs) to streamline processes and improve efficiency.
+      </p>
+      <p>
+        Beyond the technical work, I enjoy <strong>sharing knowledge, exploring innovative solutions, and continuously learning</strong>. My goal is to grow as a developer and data professional while contributing to projects that make technology an enabler of strategic decisions.
+      </p>
+      <p>
+        Currently, I’m open to <strong>international opportunities</strong> where I can apply my skills in data, software engineering, and AI to help organizations unlock the power of their information and deliver smarter, scalable solutions.
+      </p>
+    </section>
+
+    <section id="projects" class="container section">
+      <h2>Projects</h2>
+      <div class="tools">
+        <input id="search" type="search" placeholder="Buscar projeto..." aria-label="Buscar projeto" />
+        <div id="tagFilters" class="tags"></div>
+      </div>
+      <div id="gridProjetos" class="grid"></div>
+    </section>
+
+    <section id="experience" class="container section">
+      <h2>Experience</h2>
+      <ul class="timeline">
+        <li>
+          <strong>Sicoob Credicapital — BI & AI Analyst</strong>
+          <span>2021 — Present</span>
+          <p>Developing solutions in Power BI, Power Apps, process automation, SQL/Python ETL, and AI projects for credit, risk, and operational efficiency.</p>
+        </li>
+      </ul>
+    </section>
+
+
+    <section id="skills" class="container section">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>JavaScript Full Stack (Node.js & Browser)</li>
+        <li>Python (Pandas, ETL, Automation)</li>
+        <li>SQL Server (T-SQL, Stored Procedures, ETL)</li>
+        <li>Power BI (DAX, Power Query, Data Modeling)</li>
+        <li>Power Apps (Canvas Apps, Dataverse, SharePoint integration)</li>
+        <li>Power Automate (Cloud Flows, Desktop RPA, API Integration)</li>
+        <li>Excel VBA (Macros, Process Automation)</li>
+        <li>RPA (Power Automate Desktop, Python Scripting)</li>
+        <li>Data Engineering (ETL, Data Pipelines, Parquet, APIs)</li>
+        <li>Machine Learning (Scikit-learn, SHAP, Predictive Modeling)</li>
+        <li>Git & GitHub (Version Control, Collaboration)</li>
+        <li>Docker (Containers, Dev Environments)</li>
+      </ul>
+    </section>
+
+    <section id="contato" class="container section">
+      <h2>Contato</h2>
+      <form id="contactForm" class="contact">
+        <label>Nome
+          <input type="text" name="name" required />
+        </label>
+        <label>Email
+          <input type="email" name="email" required />
+        </label>
+        <label>Mensagem
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button class="btn" type="submit">Enviar</button>
+        <p id="contactStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Ivo Junior — Feito com Node + JS</p>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="false">
+    <div class="modal-content" role="document">
+      <button id="modalClose" class="modal-close" aria-label="Fechar">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+  <script src="/app.js?v=3" defer></script>
+  <!-- <script src="/app.js" defer></script> -->
+</body>
+</html>

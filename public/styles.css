@@ -1,0 +1,366 @@
+/* Dark theme (default) */
+:root {
+  --bg: #0b0d10;
+  --fg: #e7edf3;
+  --muted: #9fb0c3;
+  --brand: #4f8cff;
+  --card: #13161a;
+  --border: #232932;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Light theme override */
+html.light {
+  --bg: #f7f9fc;
+  --fg: #0f1620;
+  --muted: #566374;
+  --brand: #245eea;
+  --card: #ffffff;
+  --border: #e6ebf2;
+  --shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Base */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+        Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+a {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+/* Buttons */
+.btn {
+  background: var(--brand);
+  color: #fff;
+  border: 0;
+  padding: 10px 16px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--brand);
+  border: 2px solid var(--brand);
+}
+
+/* Header / Nav */
+.site-header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(8px);
+  background: color-mix(in oklab, var(--bg), transparent 30%);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.menu {
+  list-style: none;
+  margin: 0 0 0 auto;
+  padding: 0;
+  display: flex;
+  gap: 14px;
+}
+
+#themeToggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 10px;
+  color: var(--fg);
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  align-items: center;
+  padding: 56px 0 24px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 3px solid var(--border);
+}
+
+.hl { color: var(--brand); }
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--brand);
+}
+
+.skills-line {
+  font-size: 0.95rem;
+  color: var(--muted);
+  max-width: 600px;        /* evita linhas muito longas */
+  line-height: 1.5;
+}
+
+.cta {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* Sections / Typography */
+.section { padding: 36px 0; }
+
+/* Justify text only inside the About Me section */
+#about p {
+  text-align: justify;
+}
+
+h1, h2 {
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+p { margin: 8px 0; color: var(--muted); }
+
+/* Tools (search + tags) */
+.tools {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+#search {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--fg);
+  border-radius: 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  background: var(--card);
+  color: var(--fg);
+}
+
+.tag.active {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+/* Projects Grid / Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 12px;
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+.card .links {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+/* Experience */
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.timeline li {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.timeline strong { display: block; }
+.timeline span   { color: var(--muted); font-size: 14px; }
+
+/* Skills badges */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.skills li {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+/* Contact */
+.contact {
+  display: grid;
+  gap: 10px;
+  max-width: 640px;
+}
+
+.contact label { display: grid; gap: 6px; }
+
+.contact input,
+.contact textarea {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--fg);
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  margin-top: 32px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.modal[aria-hidden="false"] { display: grid; }
+
+.modal-content {
+  width: min(900px, 92%);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--fg);
+  border-radius: 8px;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .avatar {
+    margin: 0 auto;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .skills-line {
+    margin: 0 auto;
+  }
+
+  .cta {
+    justify-content: center;
+  }
+}
